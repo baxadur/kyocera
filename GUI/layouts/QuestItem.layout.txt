@@ -1,0 +1,8 @@
+<VSplitPanel width="100%" height="80">
+    <VSplitPanel width="90%" height="100%">
+        <TextWidget name="QuestName" color="255,255,255,255" text="Квест" font="Light" size="1.2" align="left" />
+        <TextWidget name="QuestDesc" color="255,255,255,180" text="Описание..." font="Condensed" size="0.9" align="left" />
+        <TextWidget name="QuestProgress" color="255,255,0,255" text="Прогресс: 0/5" font="Normal" size="0.9" align="left" />
+    </VSplitPanel>
+    <ButtonWidget name="CompleteBtn" text="Получить награду" color="255,255,255,255" color2="255,0,0,255" width="90" height="30" align="center" alpha="1.0" />
+</VSplitPanel>

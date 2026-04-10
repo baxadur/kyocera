@@ -1,0 +1,31 @@
+class KTQuestData {
+    string Name;
+    string Description;
+    ref array<string> Objectives;
+    ref array<string> RewardItems;
+    int RewardMoney;
+    int MaxProgress;
+
+    void KTQuestData(string name, string desc, array<string> obj, array<string> rewards, int money, int maxProg) {
+        Name = name;
+        Description = desc;
+        Objectives = obj;
+        RewardItems = rewards;
+        RewardMoney = money;
+        MaxProgress = maxProg;
+    }
+};
+
+class KTQuestConfig {
+    static ref map<string, ref KTQuestData> Quests = new map<string, ref KTQuestData>;
+
+    static void Init() {
+        array<string> obj1 = {"Убить 5 бандитов"};
+        array<string> rew1 = {"M4A1", "Ammo_556x45", "CanOpener"};
+        Quests.Insert("KillBandits", new KTQuestData("Охота на бандитов", "Убейте 5 бандитов в зоне.", obj1, rew1, 5000, 5));
+
+        array<string> obj2 = {"Принести 3 аптечки"};
+        array<string> rew2 = {"CZ75", "Ammo_9x19", "Battery9V"};
+        Quests.Insert("DeliverMedkits", new KTQuestData("Медицинская помощь", "Принесите 3 аптечки врачу.", obj2, rew2, 3000, 3));
+    }
+};

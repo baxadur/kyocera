@@ -1,0 +1,12 @@
+*.pbo
+*.bi
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*~
+/4_World/**/*.log
+/4_World/**/Thumbs.db
